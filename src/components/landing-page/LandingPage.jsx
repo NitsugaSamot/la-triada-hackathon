@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 import nftOne from "../../assets/1.jpeg"
 import nftTwo from "../../assets/2.jpeg"
 import nftThree from "../../assets/3.jpeg"
@@ -37,37 +39,14 @@ const LandingPage = () => {
   
 
   return (
+    <>
+    
     <body>
-        <header className="header">
-            <div className="contenedor contenido-header">
-                <div className="barra">
-                    <div className="logo">
-                        <h1 className="nombre-sitio">
-                             Triada<span>Hackathon</span>
-                        </h1>
-                    </div>
-
-                    <div className="contacto">
-                        <a className="telefono" href="tel:01-800-0000-000">01-800-0000-000</a>
-
-                        <nav className="navegacion">
-                            <a className="link" href="#">Inicio</a>
-                            <a className="link" href="#nosotros">Navegacion</a>
-                            <a className="link" href="#modelos">Navegacion</a>
-                        </nav>
-                    </div>
-                </div>
-                <div className="slogan">
-                    <h1>NFT</h1>
-                    <p>La Triada - Hackathon</p>
-                </div>
-            </div>
-        </header>
-
+    <Header/>
         <section id="galeria" className="contenedor mt-5">
         <h2>Galería</h2>
 
-        <div className="galeria">
+        <div id='galeria' className="galeria">
           {galleryImages.map((image, index) => (
             <div className="imagen" key={index} onClick={() => openModal(image)}>
               <img src={image} alt={`imagen galeria ${index + 1}`} />
@@ -94,30 +73,13 @@ const LandingPage = () => {
   <p className='p'>Posterior al registro, en su perfil encontrará un botón, Crear NFT, en la parte superior derecha. Para más información, descargue el manual de instrucciones.</p>
 </section>
 
-      <footer className="footer">
-        <div className="contenedor">
-            <div className="barra">
-                <div className="logo">
-                    <h1 className="nombre-sitio">
-                        La Triada<span>Hackathon</span>
-                    </h1>
-                </div>
 
-                <div id="contacto" className="contacto">
+        <Footer/>
 
-                    <nav className="navegacion">
-                        <a className="link" href="#">Inicio</a>
-                        <a className="link" href="#">Nosotros</a>
-                        <a className="link" href="#">Contacto</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
 
-        <p className="copyright">Todos los derechos reservados 2024 &copy; </p>
-    </footer>
 
     </body>
+    </>
   )
 }
 
