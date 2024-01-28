@@ -16,6 +16,7 @@ import emumu2 from "../../assets/img-celu/emumu2.jpg"
 import nftEleven from "../../assets/11.jpeg"
 import chuwbacca from "../../assets/img-celu/chuwbacca.jpg"
 import Modal from "../modal/Modal";
+import {Link} from "react-router-dom"
 
 
 const LandingPage = () => {
@@ -42,7 +43,36 @@ const LandingPage = () => {
     <>
     
     <body>
+<<<<<<< HEAD
     <Header/>
+=======
+        <header className="header">
+            <div className="contenedor contenido-header">
+                <div className="barra">
+                    <div className="logo">
+                        <h1 className="nombre-sitio">
+                             Triada<span>Hackathon</span>
+                        </h1>
+                    </div>
+
+                    <div className="contacto">
+                        <a className="telefono" href="tel:01-800-0000-000">01-800-0000-000</a>
+
+                        <nav className="navegacion">
+                            <a className="link" href="#">Inicio</a>
+                            <a className="link" href="#nosotros"><Link to={"/about"} >Nosotros</Link></a>
+                            <a className="link" href="#modelos">Navegacion</a>
+                        </nav>
+                    </div>
+                </div>
+                <div className="slogan">
+                    <h1>NFT</h1>
+                    <p>La Triada - Hackathon</p>
+                </div>
+            </div>
+        </header>
+
+>>>>>>> 3db00f81ad91d773f853470430b940f6f63bc88f
         <section id="galeria" className="contenedor mt-5">
         <h2>Galería</h2>
 
